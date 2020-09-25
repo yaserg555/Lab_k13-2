@@ -25,7 +25,7 @@ print("-8 / 3 = " + str(-8 / 3) + " " + str(type(-8 % 3)), "-8 // 3 = " + str(-8
 print("//////////////")
 
 print(convert("1011", 2))
-print(convert("11111111", 2))
+print(convert("11111111", 2)) # спробуй print(convert("11111111111111111", 2))
 
 print(convert("1101", 8))
 
