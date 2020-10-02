@@ -1,0 +1,12 @@
+print('Barannik')
+
+print(7/2.0)
+type(7/2.0)
+print(7//2)
+type(7//2)
+print(7%2)
+type(7%2)
+print(7*2)
+type(7*2)
+print(7**2)
+type(7**2)
