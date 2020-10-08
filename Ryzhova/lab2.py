@@ -80,10 +80,7 @@ if v2>=0:
 else:
     print("Error")
 if v2>=0:
-    v2 = bin(v2)
-    v2 = str(v2)
-    v2 = list(v2)
-    print(v2[-1])
+    print(v2%2)
 else:
     print("Error")
 print(" ")
