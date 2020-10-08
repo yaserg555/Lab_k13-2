@@ -45,19 +45,6 @@ print("int(bool(13.56)) = " + str(k))
 print("Type of result:")
 print(type(k))
 print(" ")
-print("Second part")
-print(" ")
-print("Write a number _ ")
-v = int(input())
-if v>=0:
-    q = str(v)
-    q = list(q)
-    print(min(q))
-    v = bin(v)
-    v = str(v)
-    v = list(v)
-    print(min(v))
-print(" ")
 print("Third part")
 print(" ")
 l = (((10.001/9.001)**345)*((13.001/11.001)**249))/((9.001**10)*(11.001**20))
@@ -69,3 +56,45 @@ print(r) = """Виконавець: Рижова
             Олександра
             Юріївна
      Група: К-13(2)"""
+print("Second part-1")
+print(" ")
+print("Write a number _ ")
+v1 = int(input())
+if v1>=0:
+    q1 = str(v1)
+    q1 = list(q1)
+    print(min(q1))
+    v1 = bin(v1)
+    v1 = str(v1)
+    v1 = list(v1)
+    print(min(v1))
+else:
+    print("Error")
+print(" ")
+print("Second part-2")
+print(" ")
+print("Write a number _ ")
+v2 = int(input())
+if v2>=0:
+    print(v2%10)
+else:
+    print("Error")
+print(" ")
+print("Second part-3")
+print(" ")
+print("Write a number _ ")
+v3 = int(input())
+v4 = v3
+if v4>=0:
+    while v4%10==0 :
+        v4 = v4/10
+    else:
+        print(v4%10)
+else:
+    print("Error")
+if v3>=0:
+    v3 = int(v3)
+    v3 = bin(v3)
+    v3 = str(v3)
+    v3 = list(v3)
+    print(min(v3))
