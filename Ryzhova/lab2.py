@@ -79,6 +79,13 @@ if v2>=0:
     print(v2%10)
 else:
     print("Error")
+if v2>=0:
+    v2 = bin(v2)
+    v2 = str(v2)
+    v2 = list(v2)
+    print(v2[-1])
+else:
+    print("Error")
 print(" ")
 print("Second part-3")
 print(" ")
@@ -93,8 +100,9 @@ if v4>=0:
 else:
     print("Error")
 if v3>=0:
-    v3 = int(v3)
     v3 = bin(v3)
     v3 = str(v3)
     v3 = list(v3)
-    print(min(v3))
+    print(v3[-1])
+else:
+    print("Error")
