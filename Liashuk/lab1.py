@@ -38,17 +38,17 @@ if a=="No":
                 a=input("Введи число:  ")
                 print(hex(int(a)))
             else:
-                print("Ти увів неправильні дані!!!")
+                print("Ви ввели неправильні дані!!!")
     else:
         if a=="Yes":
             a=input('Введи число:  ')
             print(oct(int(a)))
         else:
-                print("Ти увів неправильні дані!!!")
+                print("Ви ввели неправильні дані!!!")
 
 else:
     if a=="Yes":
             a=input('Введи число:  ')
             print(bin(int(a)))
     else:
-                print("Ти увів неправильні дані!!!")
+                print("Ви ввели неправильні дані!!!")
