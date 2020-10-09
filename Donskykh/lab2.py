@@ -26,3 +26,19 @@ float('inf')
 
 int(bool(13.56))
 #1
+
+type((3//5.0))
+#float
+
+type((3//5.0)*20+32.0)
+#<class 'float'>
+
+float('inf')
+#inf
+ type(float('inf'))
+#<class 'float'>
+
+bool(-0.0)
+#false
+type(bool(-0.0))
+#<class 'bool'>
