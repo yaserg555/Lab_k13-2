@@ -56,7 +56,21 @@ print(r) = """Виконавець: Рижова
             Олександра
             Юріївна
      Група: К-13(2)"""
+print(" ")
 print("Second part-1")
+print(" ")
+print("Write a number _ ")
+v2 = int(input())
+if v2>=0:
+    print(v2%10)
+else:
+    print("Error")
+if v2>=0:
+    print(v2%2)
+else:
+    print("Error")
+print(" ")
+print("Second part-2")
 print(" ")
 print("Write a number _ ")
 v1 = int(input())
@@ -68,19 +82,6 @@ if v1>=0:
     v1 = str(v1)
     v1 = list(v1)
     print(min(v1))
-else:
-    print("Error")
-print(" ")
-print("Second part-2")
-print(" ")
-print("Write a number _ ")
-v2 = int(input())
-if v2>=0:
-    print(v2%10)
-else:
-    print("Error")
-if v2>=0:
-    print(v2%2)
 else:
     print("Error")
 print(" ")
