@@ -1,5 +1,0 @@
-import math
-print('Vasilchenko')
-x=int(input())
-a=(math.cos(2/54)+131*math.pi-(64*math.e)*(14/((x+12)*(x-11)))+9*math.acos(x+10)-math.log(x+15))
-print(a)

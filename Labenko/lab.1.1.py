@@ -1,10 +1,5 @@
-print('gasparian')
-
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
+print("Labenko")
+print("a)")
 a = 9/5
 print("9/5 = " + str(a))
 print(type(a))
@@ -17,6 +12,7 @@ print(type(c))
 d = (-9)/(-5)
 print("(-9)/(-5) = " + str(d))
 print(type(d))
+print("б)")
 p = 9//5
 print("9//5 = " + str(p))
 print(type(p))
@@ -29,6 +25,7 @@ print(type(g))
 h = (-9)//(-5)
 print("(-9)//(-5) = " + str(h))
 print(type(h))
+print("в)")
 i = 9%5
 print("9%5 = " + str(i))
 print(type(i))
@@ -41,6 +38,7 @@ print(type(k))
 l = (-9)%(-5)
 print("(-9)%(-5) = " + str(l))
 print(type(l))
+print("г)")
 n = 9.0/5.0
 print("9.0/5.0 = " + str(n))
 print(type(n))
@@ -50,9 +48,8 @@ print(type(m))
 o = 1.5//0.75
 print("1.5//0.75 = " + str(o))
 print(type(o))
-
 import math
-print(math.sqrt(2))
-"""1.41..."""
+math.sqrt(2)
+"""1.4142135623730951"""
 print(3 ** 1.5)
-"""5.19..."""
+"""5.196152422706632"""
