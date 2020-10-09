@@ -32,8 +32,6 @@ if a=="No":
     if a=="No":
         a=input('Хочеш перевести число у шістьнадцякову?(Yes;No)  ')
         if a=="No":
-            input('Програма завершина!!!')
-        else:
             if a=="Yes":
                 a=input("Введи число:  ")
                 print(hex(int(a)))
