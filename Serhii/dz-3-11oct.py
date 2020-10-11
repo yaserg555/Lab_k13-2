@@ -54,5 +54,5 @@ x, y, y, x = y, x, 3, y
 >>> timeit.timeit("g(10)", globals=globals())
 1.815312818999928
 
-
+є питання - пиши t.me/yaremenko
 """
