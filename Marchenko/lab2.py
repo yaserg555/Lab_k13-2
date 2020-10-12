@@ -30,7 +30,7 @@ print('Type of result:' + str(type(k)))
 w = int(bool(13.56))
 print('int(bool(13.56))=' + str(w))
 print('-2-')
-v = 55556335
+v = int(input())
 print('Значення молодшої десяткової цифри числа v:' + str(v % 10))
 print('Значення молодшої двійкової цифри числа v:' + str(v % 2))
 print('-3-')
