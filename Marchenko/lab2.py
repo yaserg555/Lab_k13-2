@@ -1,4 +1,6 @@
 from decimal import Decimal
+
+
 print('-1-')
 a = 2 * 4 % 7
 print('2*4%7=' + str(a))
