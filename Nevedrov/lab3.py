@@ -34,7 +34,7 @@ def data_input():
     mm = input('Month:')
     yy = input('Year:')
     try:
-        valid_date = strptime(f'{mm}/{dd}/{yy}', '%m/%d/%Y')
+        valid_date = strptime(f'{mm}/{dd}/{str(10)+yy}', '%m/%d/%Y')
         cout2('Date', f'{dd}.{mm}.{yy}', 0)
     except ValueError:
         print('Invalid date')
@@ -97,7 +97,9 @@ cout2('Weeks remains', weeks(past_time_interval), weeks(future_time_interval))  
 t1 = Timer('exp(log(10.001/9.001, e))**345*exp(log(13.001/11.001, e))**249/9.001**10/11.001**20', "from math import exp, log, e")
 t2 = Timer('exp(log((10.001/9.001)**345*(13.001/11.001)**249/9.001**10/11.001**20))', "from math import exp, log, e")
 t3 = Timer('acos(cos(((10.001/9.001)**345*(13.001/11.001)**249/9.001**10/11.001**20)))', "from math import cos, acos")
+t4 = Timer('exp(log(10.001/9.001, e))**345*exp(log(13.001/11.001, e))**249/exp(log(9.001))**10/exp(log(11.001))**20', "from math import exp, log, e")
 cout('exp(ln(10.001/9.001))^345*exp(ln(13.001/11.001))^249/9.001^10/11.001^20 execution speed ', t1.timeit())
 cout('exp(ln((10.001/9.001)^345*(13.001/11.001)^249/9.001^10/11.001^20)) execution speed', t2.timeit())
 cout('arccos(cos(((10.001/9.001)^345*(13.001/11.001)^249/9.001^10/11.001^20))) execution speed', t3.timeit())
+cout('exp(ln(10.001/9.001))^345*exp(log(13.001/11.001)^249/exp(log(9.001))^10/exp(log(11.001))^20 execution speed', t4.timeit())
 cout('(10.001/9.001)^345*(13.001/11.001)^249/9.001^10/11.001^20 execution speed', timeit('(10.001/9.001)**345*(13.001/11.001)**249/9.001**10/11.001**20'))
