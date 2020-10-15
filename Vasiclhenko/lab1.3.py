@@ -24,17 +24,17 @@ print("{:.4e}".format(v))
 
 #4
 
-a=(math.log1p(10.001))*345
-a1=math.exp(a)
+#a=(math.log1p(10.001))*345
+#a1=math.exp(a)
 
-b=(math.log1p(13.001))*249
-b1=math.exp(b)
+#b=(math.log1p(13.001))*249
+#b1=math.exp(b)
 
-c=(math.log1p(9.001))*355
-c1=math.exp(c)
+#c=(math.log1p(9.001))*355
+#c1=math.exp(c)
 
-d=(math.log1p(11.001))*269
-d1=math.exp(d)
+#d=(math.log1p(11.001))*269
+#d1=math.exp(d)
 
-s=(a*b)/(c*d)
-print(s)
+#s=(a*b)/(c*d)
+#print(s)
