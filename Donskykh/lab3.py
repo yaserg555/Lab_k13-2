@@ -10,3 +10,12 @@ if len(d) == 1:
 if len(m) == 1:
     m="0"+m
 print(f'{d}.{m}.{y}')
+
+from math import tan, pi, atan
+x=float(input())
+y=float(input())
+print(f'{1/tan(x+y):.2f}')
+print(f'{1/tan(x+y):.2e}')
+
+x=float(input())
+print(f'{pi/2-atan(x):.4f}')
