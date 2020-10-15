@@ -1,6 +1,7 @@
 from math import tan, pi, atan, log, exp
 from datetime import datetime
 from timeit import timeit
+from decimal import Decimal
 
 
 print('-1-')
@@ -25,7 +26,7 @@ x = float(input())
 y = pi / 2 - atan(x)
 print(f'arcctg(x)={y:.4f}')
 print('-4-')
-x = (exp(log(10.001/9.001) * 345) * exp(log(13.001/11.001) * 249)) / (exp(log(9.001) * 10) * exp(log(11.001) * 20))
+x = (exp(log(10.001 / 9.001) * 345) * exp(log(13.001 / 11.001) * 249)) / (exp(log(9.001) * 10) * exp(log(11.001) * 20))
 print(f'(10.001^345*13.0001^249)/(9.001^355*11.001^269)={x}')
 print('-5-')
 now = datetime.now()
@@ -46,13 +47,14 @@ print('години: ' + str(dif2.days * 24 + dif2.seconds // 3600))
 print('хвилини: ' + str(dif2.days * 1440 + dif2.seconds // 60))
 print('секунди: ' + str(dif2.days * 86400 + dif2.seconds))
 
+
 def func(x):
-    print(f'execution time of {x}')
+    return timeit(x, globals=globals())
 
 
-a = '(((10.001/9.001)**345)*((13.001/11.001)**249))/((9.001**10)*(11.001**20))'
-b = '(Decimal(10.001) ** 345 * Decimal(13.001) ** 249) / (Decimal(9.001) ** 355 * Decimal(11.001) ** 269)'
-c = '(exp(log(10.001/9.001) * 345) * exp(log(13.001/11.001) * 249)) / (exp(log(9.001) * 10) * exp(log(11.001)* 20))'
-print(timeit('func(a)', setup='from __main__ import func, a', number=1))
-print(timeit('func(b)', setup='from __main__ import func, b', number=1))
-print(timeit('func(c)', setup='from __main__ import func, c', number=1))
+a = func('(((10.001 / 9.001) ** 345) * ((13.001 / 11.001) ** 249)) / ((9.001 ** 10) * (11.001 ** 20))')
+b = func('(Decimal(10.001) ** 345 * Decimal(13.001) ** 249) / (Decimal(9.001) ** 355 * Decimal(11.001) ** 269)')
+c = func('(exp(log(10.001 / 9.001) * 345) * exp(log(13.001 / 11.001) * 249)) / (exp(log(9.001) * 10) * exp(log(11.001)* 20))')
+print(a)
+print(b)
+print(c)
