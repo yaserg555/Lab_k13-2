@@ -8,6 +8,10 @@ try:                                   #3 AND 4
     print(f"[{x},{y}]")
 except:
     print("Введи число!!!")
+from math import log                  #5
+x=input("x")
+y=input("y")
+print(log(int(x+y),69))
 try:                                   #6
     a=int(input("Число а:  "))
     b=int(input("Число b:  "))
