@@ -43,7 +43,7 @@ if len(d) == 1:
     d = "0" + d
 if len(m) == 1:
     m = "0" + m
-print(f'{d}.{m}.{y}')
+print(f'{d}.{m}.{y%100}')
 
 
 #2 котангенс
