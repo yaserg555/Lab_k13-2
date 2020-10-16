@@ -10,3 +10,10 @@ x=float(input())
 y=float(input())
 a=[x,y]
 print(a)
+
+x=float(input())
+y=float(input())
+z=float(input())
+if x+y==z or x+z==y or z+y==x:
+    print('yes')
+
