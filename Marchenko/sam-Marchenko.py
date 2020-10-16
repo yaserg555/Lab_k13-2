@@ -1,4 +1,4 @@
-from math import cos
+from math import cos, log
 
 
 a = input()
@@ -10,6 +10,10 @@ print(f'Периметр трикутника: {P}')
 x = float(input())
 y = float(input())
 print(f'({x};{y})')
+
+x = float(input())
+y = log(x, 89)
+print(y)
 
 x = input()
 y = input()
