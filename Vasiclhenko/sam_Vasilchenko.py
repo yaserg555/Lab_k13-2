@@ -102,7 +102,13 @@ import requests
 from bs4 import BeautifulSoup
 
 
-def world_covid19_stats(url: str = "https://www.worldometers.info/coronavirus/country/georgia/") -> dict:
+#10
+
+import requests
+from bs4 import BeautifulSoup
+
+
+def world_covid19_stats(url) -> dict:
     soup = BeautifulSoup(requests.get(url).text, "html.parser")
     keys = soup.findAll("h1")
     values = soup.findAll("div", {"class": "maincounter-number"})
@@ -113,21 +119,10 @@ def world_covid19_stats(url: str = "https://www.worldometers.info/coronavirus/co
 
 if __name__ == "__main__":
     print("\033[1m" + "COVID-19 Status of Georgia" + "\033[0m\n")
-    for key, value in world_covid19_stats().items():
+    str1 = "https://www.worldometers.info/coronavirus/country/georgia/"
+    for key, value in world_covid19_stats(str1).items():
         print(f"{key}\n{value}\n")
-
-
-def world_covid19_statss(url: str = "https://www.worldometers.info/coronavirus/country/australia/") -> dict:
-    soup = BeautifulSoup(requests.get(url).text, "html.parser")
-    keys = soup.findAll("h1")
-    values = soup.findAll("div", {"class": "maincounter-number"})
-    keys += soup.findAll("span", {"class": "panel-title"})
-    values += soup.findAll("div", {"class": "number-table-main"})
-    return {key.text.strip(): value.text.strip() for key, value in zip(keys, values)}
-
-
-if __name__ == "__main__":
     print("\033[1m" + "COVID-19 Status of Australia" + "\033[0m\n")
-    for key, value in world_covid19_statss().items():
+    str2 = "https://www.worldometers.info/coronavirus/country/australia/"
+    for key, value in world_covid19_stats(str2).items():
         print(f"{key}\n{value}\n")
-
