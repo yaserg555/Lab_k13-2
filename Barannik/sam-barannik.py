@@ -37,3 +37,14 @@ i=3
 while i<112:
   s=s+cos(i/(i+2))
 print(s)
+
+#11
+
+
+#12
+x=float(input())
+y=float(input())
+x=x+y
+y=x-y
+x=x-y
+print(x','y)
