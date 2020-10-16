@@ -59,5 +59,8 @@ len(a)
 #6
 len(set(a))
 #3
+if len(a) == len(set(a)):
+    print('строка уникальна')
+    
 
 
