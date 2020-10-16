@@ -1,3 +1,6 @@
+from math import cos
+
+
 a = input()
 b = input()
 c = input()
