@@ -35,4 +35,26 @@ elif c+a == b:
 else:
     print(f"No")
     
-    
+# 7 
+aa = int(input("Введіть перше число "))
+bb = int(input("Введіть друге число "))
+cc = int(input("Введіть третє число "))
+dd = int(input("Введіть четверте число "))
+if aa%2 != 0 and bb%2 != 0 and cc != 0 and dd != 0:
+    print(f"Not found")
+else:
+    while max(aa,bb,cc,dd)%2 != 0:
+        if max(aa,bb,cc,dd) == aa and aa%2 != 0:
+            aa = 0
+            continue
+        if max(aa,bb,cc,dd) == dd and dd%2 != 0:
+            dd = 0
+            continue
+        if max(aa,bb,cc,dd) == cc and cc%2 != 0:
+            cc = 0
+            continue
+        if max(aa,bb,cc,dd) == bb and bb%2 != 0:
+            bb = 0
+            continue
+    else:
+        print(max(aa,bb,cc,dd))
