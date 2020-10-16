@@ -19,3 +19,25 @@ y=int(input("Y"))
 c=int(input("C"))
 
 print(f'A[{x},{y},{c}]')
+
+
+#5
+
+
+a=int(input('a'))
+b=int(input('b'))
+c=a+b
+v=math.log(c,89)
+print(v)
+
+
+#6
+
+
+a=int(input('a'))
+b=int(input('b'))
+c=int(input('c'))
+
+if (a+b==c) or (a+c==b) or (b+c==a):
+    print('yes')
+print('no')
