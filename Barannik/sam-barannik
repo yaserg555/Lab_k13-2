@@ -1,0 +1,9 @@
+a=float(input())
+b=float(input())
+c=float(input())
+print(a+b+c)
+x=float(input())
+y=float(input())
+z=float(input())
+l=[x,y,z]
+print(l)
