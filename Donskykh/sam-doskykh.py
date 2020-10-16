@@ -11,6 +11,7 @@ y=float(input())
 a=[x,y]
 print(a)
 
+#6
 x=float(input())
 y=float(input())
 z=float(input())
