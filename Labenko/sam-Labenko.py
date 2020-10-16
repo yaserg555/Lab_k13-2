@@ -21,3 +21,18 @@ x=int(input("X = "))
 y=int(input("Y = "))
 
 print(f'O[{x},{y}]')
+
+# 6
+a = int(input("Перше число = "))
+b = int(input("Друге число = "))
+c = int(input("Третє число = "))
+if a+b == c:
+    print(f"Yes")
+elif b+c == a:
+    print(f"Yes")
+elif c+a == b:
+    print(f"Yes")
+else:
+    print(f"No")
+    
+    
