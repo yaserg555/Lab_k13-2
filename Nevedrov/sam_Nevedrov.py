@@ -40,3 +40,12 @@ if a%2 == 1 and b%2 == 1 and c%2==1 and d%2 == 1:
     print('not found')
 else:
     print(check(check(check(check2(a), check2(b)), check2(c)), check2(d)))
+#8
+from math import cos
+from decimal import Decimal
+c = 3
+p = 0
+while (c < 111):
+    p = cos(Decimal(c/c+2)) + p
+    c = c + 2
+print(f'{p}')
