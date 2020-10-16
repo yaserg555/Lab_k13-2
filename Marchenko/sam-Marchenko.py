@@ -32,3 +32,12 @@ else:
 k = int(input())
 a = [range(10, 100)]
 print(a[k])
+
+a = 3
+c = 0
+while a < 111:
+    a += 2
+    c += cos(a / (a + 2))
+print(c)
+
+
