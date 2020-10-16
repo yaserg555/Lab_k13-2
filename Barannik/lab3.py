@@ -1,0 +1,11 @@
+year=input()
+month=input()
+day=input()
+print(f'{day}.{month}.{year}')
+from math import tan, atan, pi, log, exp
+x=int(input())
+y=int(input())
+print(f:'{1/tan(x+y):.2f}')
+x=int(input())
+print(f'{pi/2-(atan(x)):.4f}')
+print((exp(log(10.001/9.001)*345)/exp(log(9.001)*10))*(exp(log(13.001/11.001)*249)/exp(log(11.001)*20)))
