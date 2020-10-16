@@ -81,3 +81,53 @@ if k%2==1:
         a+=1
         k1+=-1
     print(a//10)
+
+    
+#9
+
+a=3
+b=5
+v=0
+
+while a<112:
+    c=a/b
+    v+=math.cos(c)
+    a+=2
+    b+=2
+print(v)
+
+#10
+
+import requests
+from bs4 import BeautifulSoup
+
+
+def world_covid19_stats(url: str = "https://www.worldometers.info/coronavirus/country/georgia/") -> dict:
+    soup = BeautifulSoup(requests.get(url).text, "html.parser")
+    keys = soup.findAll("h1")
+    values = soup.findAll("div", {"class": "maincounter-number"})
+    keys += soup.findAll("span", {"class": "panel-title"})
+    values += soup.findAll("div", {"class": "number-table-main"})
+    return {key.text.strip(): value.text.strip() for key, value in zip(keys, values)}
+
+
+if __name__ == "__main__":
+    print("\033[1m" + "COVID-19 Status of Georgia" + "\033[0m\n")
+    for key, value in world_covid19_stats().items():
+        print(f"{key}\n{value}\n")
+
+
+def world_covid19_statss(url: str = "https://www.worldometers.info/coronavirus/country/australia/") -> dict:
+    soup = BeautifulSoup(requests.get(url).text, "html.parser")
+    keys = soup.findAll("h1")
+    values = soup.findAll("div", {"class": "maincounter-number"})
+    keys += soup.findAll("span", {"class": "panel-title"})
+    values += soup.findAll("div", {"class": "number-table-main"})
+    return {key.text.strip(): value.text.strip() for key, value in zip(keys, values)}
+
+
+if __name__ == "__main__":
+    print("\033[1m" + "COVID-19 Status of Australia" + "\033[0m\n")
+    for key, value in world_covid19_statss().items():
+        print(f"{key}\n{value}\n")
+
