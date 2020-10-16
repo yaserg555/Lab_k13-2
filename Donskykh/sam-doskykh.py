@@ -41,6 +41,16 @@ if k%2==0:
 else:
     print(x+1)
 
+    #9
+from math import cos
+s=0;
+i=3
+while i<113:
+    s+=cos(i/(i+2))
+    i+=2
+print(s)
+
+
 
 
 
