@@ -33,11 +33,8 @@ else:
 
 x1 = float(input("Enter x1: "))
 
-if (math.atan(x1) == 0):
-    print("Infinity")
-else:
-    res1 = 1 / math.atan(x1)
-    print(f'{res1:.4f}')
+res1 = -math.atan(x1) + math.pi / 2;
+print(f'{res1:.4f}')
 
 print(exp(345*log(10.001 / 9.001) - 10*log(9.001) + 249*log(13.001 / 11.001) - 20*log(11.001)))
 
