@@ -41,3 +41,43 @@ c=int(input('c'))
 if (a+b==c) or (a+c==b) or (b+c==a):
     print('yes')
 print('no')
+
+#7
+
+a=int(input('a'))
+b=int(input('b'))
+c=int(input('c'))
+d=int(input('d'))
+
+a1=a%2
+b1=b%2
+c1=c%2
+d1=d%2
+
+ma='not found'
+if a1==0:
+    ma=a
+if b1==0 and b>ma:
+    ma=b
+if c1==0 and c>ma:
+    ma=c
+if d1==0 and d>ma:
+    ma=d
+print(ma)
+
+#8
+
+k=int(input('k'))
+a=10
+if k%2==0:
+    k1=k/2
+    while k1>1:
+        a+=1
+        k1+=-1
+    print(a%10)
+if k%2==1:
+    k1=(k+1)/2
+    while k1>1:
+        a+=1
+        k1+=-1
+    print(a//10)
