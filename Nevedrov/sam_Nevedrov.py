@@ -10,10 +10,10 @@ x = int(input('x:'))
 y = int(input('y:'))
 print(f'{x,y}')
 #6
-a = int(input('A:'))
-b = int(input('B:'))
-c = int(input('C:'))
-if a + b == c or b + c == a or a + c == b and a >= 0 and b >= 0 and c >= 0:
+A = int(input('A:'))
+B = int(input('B:'))
+C = int(input('C:'))
+if A + B == C or B + C == A or A + C == B and A >= 0 and B >= 0 and C >= 0:
     print('yes')
 else:
     print('no')
