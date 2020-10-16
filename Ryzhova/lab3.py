@@ -20,4 +20,7 @@ print("")
 print((exp(log(10.001/9.001)*345)/exp(log(9.001)*10))*(exp(log(13.001/11.001)*249)/exp(log(11.001)*20)))
 x = float(input('x ='))
 y = float(input('y ='))
-print(math.log(x+y, 89))
+if x+y>0:
+  print(math.log(x+y, 89))
+else:
+  print("Error")
