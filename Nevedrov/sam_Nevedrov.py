@@ -1,8 +1,8 @@
 print('Алексей')
 #3
-a = int(input('a:'))
-b = int(input('b:'))
-c = int(input('c:'))
+a = float(input('a:'))
+b = float(input('b:'))
+c = float(input('c:'))
 p = a+b+c
 print(f'{p}')
 #4
@@ -41,11 +41,16 @@ if a%2 == 1 and b%2 == 1 and c%2==1 and d%2 == 1:
 else:
     print(check(check(check(check2(a), check2(b)), check2(c)), check2(d)))
 #8
+k = int(input('k:'))
+if k % 2 == 0:
+    print(f'{int((k/2)%10)}')
+else:
+    print(f'{k // 10 + 1}')
+#9
 from math import cos
-from decimal import Decimal
 c = 3
 p = 0
 while (c < 111):
-    p = cos(Decimal(c/c+2)) + p
+    p = cos(Decimal((c/)c+2)) + p
     c = c + 2
 print(f'{p}')
