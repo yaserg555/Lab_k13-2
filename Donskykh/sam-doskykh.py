@@ -31,3 +31,16 @@ def y():
             return l[i]
     return "not found"
 print(y())
+
+#8
+k=int(input())
+x=int(k/20)
+y=k%20
+if k%2==0:
+    print((y-1)%10)
+else:
+    print(x+1)
+
+
+
+
