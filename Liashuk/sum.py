@@ -1,4 +1,4 @@
-try:                                   #3 AND 4          
+try:                                   #3 AND 4
     a = float(input("Уведіть довжини стороти 1: "))
     b = float(input("Уведіть довжини сторони 2: "))
     c = float(input("Уведіть довжини сторони 3: "))
@@ -23,7 +23,14 @@ try:                                    #7
     b1=int(input("Число b1:  "))
     c1=int(input("Число c1:  "))
     d1=int(input("Число d1:  "))
-    print(max({a1},{b1},{c1},{d1}))
+    print(max(a1,b1,c1,d1))
 except:
     print("not found")
+k=int(input("k:  "))                          #8
+x=int(k/20)
+y=k%20
+if k%2==0:
+    print((y-1)%10)
+else:
+    print(x+1)
 
