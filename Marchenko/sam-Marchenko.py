@@ -7,20 +7,26 @@ c = input()
 P = a + b + c
 print(f'Периметр трикутника: {P}')
 
+
 x = float(input())
 y = float(input())
 print(f'({x};{y})')
+
 
 x = float(input())
 y = float(input())
 z = log(x + y, 89)
 print(z)
 
-x = input()
-y = input()
-z = input()
+
+x = int(input())
+y = int(input())
+z = int(input())
 if x + y == z or x + z == y or y + z == x:
     print('Yes')
+else:
+    print('No')
+
 
 x = int(input())
 y = int(input())
@@ -64,6 +70,7 @@ else:
     b //= 10
 print(b)
 
+
 a = 3
 b = 0
 while a < 111:
@@ -71,3 +78,23 @@ while a < 111:
     b += cos(a / (a + 2))
 print(b)
 
+
+a = [1, 2, 3, 4, 4, 5]
+b = set(a)
+if len(a) == len(b):
+    print('Все числа в последовательности уникальные')
+else:
+    print('Числа в последовательности не уникальные')
+    
+    
+a = int(input())
+b = int(input())              # 1 спосіб
+a = a + b
+b = a - b
+a = a - b
+print(f'a = {a}, b = {b}')
+
+a = int(input())
+b = int(input())              # 2 спосіб
+a, b = b, a
+print(f'a = {a}, b = {b}')
