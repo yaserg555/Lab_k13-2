@@ -126,3 +126,40 @@ if __name__ == "__main__":
     str2 = "https://www.worldometers.info/coronavirus/country/australia/"
     for key, value in world_covid19_stats(str2).items():
         print(f"{key}\n{value}\n")
+
+        
+#11
+
+
+n=int(input('длина списка'))
+a=[]
+for i in range(n):
+    c=int(input())
+    a.append(c)
+b=len(a)
+a1=set(a)
+l=len(a1)
+if b==l:
+    print('без повторений')
+else:print('есть повторения')
+
+
+#12.1
+x=int(input('x'))
+y=int(input('y'))
+a=x
+x=y
+y=a
+print(f'x={x}, y={y}')
+#12.2
+x=int(input('x'))
+y=int(input('y'))
+x=x+y
+y=x-y
+x=x-y
+print(f'x={x}, y={y}')
+#12.3
+x=int(input('x'))
+y=int(input('y'))
+x, y =y, x
+print(f'x={x}, y={y}')
