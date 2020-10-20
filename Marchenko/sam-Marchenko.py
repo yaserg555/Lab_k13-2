@@ -79,7 +79,7 @@ while a < 111:
 print(b)
 
 
-a = [1, 2, 3, 4, 4, 5]
+a = [int(i) for i in input().split()]
 b = set(a)
 if len(a) == len(b):
     print('Все числа в последовательности уникальные')
