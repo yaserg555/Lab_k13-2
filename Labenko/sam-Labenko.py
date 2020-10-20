@@ -17,10 +17,10 @@ else:
 
 
     
-x=int(input("X = "))
-y=int(input("Y = "))
+x1=int(input("X = "))
+y1=int(input("Y = "))
 
-print(f'O[{x},{y}]')
+print(f'O[{x1},{y1}]')
 
 # 6
 a = int(input("Перше число = "))
@@ -67,3 +67,67 @@ v = [1,0,1,1,1,2,1,3,1,4,1,5,1,6,1,7,1,8,1,9,2,0,2,1,2,2,2,3,2,4,2,5,2,6,2,7,2,8
      8, 9, 9]
 d = int(input("Введіть число "))
 print(v[d])
+
+# 9
+j = 3
+k = 0
+r = 5
+from math import cos
+while j <= 111 and r <= 113:
+       k += cos(j+r)
+       j += 2
+       r += 2
+       
+print(k)
+
+# 10
+
+import requests
+from bs4 import BeautifulSoup
+
+
+def world_covid19_stats(url: str = "https://www.worldometers.info/coronavirus/country/ukraine/") -> dict:
+    """
+    Return a dict of current Ukraine COVID-19 statistics
+    """
+    soup = BeautifulSoup(requests.get(url).text, "html.parser")
+    keys = soup.findAll("h1")
+    values = soup.findAll("div", {"class": "maincounter-number"})
+    keys += soup.findAll("span", {"class": "panel-title"})
+    values += soup.findAll("div", {"class": "number-table-main"})
+    return {key.text.strip(): value.text.strip() for key, value in zip(keys, values)}
+
+
+if __name__ == "__main__":
+    print("\033[1m" + "COVID-19 Status of Ukraine" + "\033[0m\n")
+    for key, value in ukraine_covid19_stats().items():
+        print(f"{key}\n{value}\n")
+
+# 11
+aaa = [1, 3, 4, 5, 4, 5]
+bbb = set(aaa)
+if len(aaa) == len(bbb):
+    print('Всі числа унікальні')
+else:
+    print('Числа не унікальні')
+
+# 12
+x = float(input("Введіть значення х = "))
+y = float(input("Введіть значення y = "))
+q = x
+y = q
+x = y
+print(f"x={x}, y={y}")
+
+
+x = float(input("Введіть значення х = "))
+y = float(input("Введіть значення y = "))
+x=x+y
+y=x-y
+x=x-y
+print(f"x={x}, y={y}")
+
+x = float(input("Введіть значення х = "))
+y = float(input("Введіть значення y = "))
+x, y =y, x
+print(f'x={x}, y={y}')
