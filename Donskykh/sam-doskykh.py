@@ -11,7 +11,7 @@ y=float(input())
 a=[x,y]
 print(a)
 
-#6
+    #6
 x=float(input())
 y=float(input())
 z=float(input())
@@ -32,7 +32,7 @@ def y():
     return "not found"
 print(y())
 
-#8
+    #8
 k=int(input())
 x=int(k/20)
 y=k%20
@@ -63,4 +63,21 @@ if len(a) == len(set(a)):
     print('строка уникальна')
     
 
+#меняю местами перемпенные
+    #1
+x=3
+y=3
+temp=x
+x=y
+y=temp
+    #2
+x=3
+y=5
+x,y=y,x
+    #3
+x=3
+y=5
+x=x+y
+y=x-y
+x=x-y
 
