@@ -1,44 +1,40 @@
-from decimal import Decimal
-
-
-     # 1
+       # 1
 def func(a, b):
     return f'Good morning, {a} {b}!'
 
 
-print('What is your name?')
-v = input()
-print('What is your surname?')
-m = input()
+v = input('What is your name?\n')
+m = input('What is your surname?\n')
 print(func(v, m))
 
-
-def func2(x, y, z):
-    return x != y and x != z and y != z
-
      # 2
+def func2(x, y, z):
+    return x != y and x!= z 
+
+
 k = input('x = ')
 s = input('y = ')
 t = input('z = ')
 print(f'Змінні попарно різні: {func2(k, s, t)}')
 
      # 3
-def func3(a: Decimal, b: Decimal):
-    return a == b
+def func3(x, y, epsilon=(10 ** -10)):
+    return abs(x - y) <= epsilon
 
 
-g = Decimal(input('перше дійсне значення = '))
-h = Decimal(input('друге дійсне значення = '))
+g = float(input('перше дійсне значення = '))
+h = float(input('друге дійсне значення = '))
 print(f'Два дійсних значення рівні: {func3(g, h)}')
 
-      #4
-def func1(a, b, c):
-    return float(a) == float(b) == float(c)
+        #4
+def func1(a1, b1, a2, b2):
+    return a1 * b2 == a2 * b1
 
 
-n = [float(i) for i in input('a, b, c для першого рівняння: ').split(', ')]     # a,b,c для першого рівняння
-p = [float(i) for i in input('a, b, c для другого рівняння: ').split(', ')]     # a,b,c для другого рівняння
-k1 = n[0] / p[0]
-k2 = n[1] / p[1]
-k3 = n[2] / p[2]
-print(f'Колінеарні: {func1(k1, k2, k3)}')
+x = float(input('a1 = '))
+y = float(input('b1 = '))
+z = float(input('a2 = '))
+t = float(input('b2 = '))
+
+print(f'Колінеарні: {func1(x, y, z, t)}')
+
