@@ -1,3 +1,4 @@
+#№1
 x=1
 y=2.5
 y=x
@@ -5,29 +6,44 @@ x=3
 x+=x
 print(f"""x={x}; y={y}""")
 print("///////////////////////////////////////////\n")
+
+#№2
 x,y=[1,2]
 x,y,y,x=[y,x,3,y]
 print(f"""x={x}; y={y}""")
 print("///////////////////////////////////////////\n")
+
+#№3 and 4
 print(f"""x^2+y^2 ={(x+y)/(x**2+y**2)}
 x^2+y^2 ={round((x+y)/(x**2+y**2),3)}""")
 print("///////////////////////////////////////////\n")
-try:
-    a=['00','01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23']
-    hour=input("Скільки годин: ")
-    i=0
-    while hour!=a[i]:
-        i+=1
-    minutes=int(input("Скільки хвилин: "))
-    if minutes<10 and minutes>=0:
-        print(f"""  {a[i]}:0{minutes}""")
-    else:
-        if minutes>=10 and minutes<60:
-            print(f"""  {a[i]}:{minutes}""")
+
+#№5
+def Time():
+    try:
+        x=int(input("Скільки годин:  "))
+        y=int(input("Скільки хвилин: "))
+        if 0<=x<10 and 0<=y<10:
+            print(f"""Time:  0{x}:0{y} """)
         else:
-            print("Введіте правильні дані!!!")
-except:
-    print("Введіте правильні дані!!!")
+            if  0<=x<10 and 10<=y<60:
+                print(f"""Time:  0{x}:{y} """)
+            else:
+                if  10<=x<24 and  0<=y<10:
+                    print(f"""Time:  {x}:0{y} """)
+                else:
+                    if 10<=x<24 and 10<=y<60:
+                        print(f"""Time:  {x}:{y} """)
+                    else:
+                        if x<0 or x>23:
+                            print('Введи правильні дані в години!')
+                        else:
+                            if y<0 or y>59:
+                                print('Введи правильні дані у хвилини!')
+    except ValueError:
+        print("Введи число!!!")
+
+Time()
 print("///////////////////////////////////////////\n")
 from math import e,atan
 print(e)
