@@ -10,6 +10,16 @@ print(bool(-0.0), type(bool(-0.0)))
 print(float('inf'), type(float('inf')))
 print(int(bool(13.56)), type(int(bool(13.56))))
 print("""
+
+#№2
+def chislo(x):
+    print(x%2)
+chislo(2132133)
+
+
+#№3
+print((10.001/9.001)**345*(13.001/11.001)**249/9.001**10/11.001**20)
+
 #№4
 Виконавець: Ляшук
             Андрій
