@@ -2,11 +2,11 @@ https://www.codewars.com/users/Annalab-sys
 @SerialManiacbot
 
 # 1
-t = str(input("Ваше ім'я - "))
+q = str(input("Ваше ім'я - "))
 k = str(input("Ваше прізвище - "))
 def hello(x, y)
      return f'Вітаю,{y} {x}'
-print(f"Вітаю, {hello(t, k)}")
+print(f"{hello(q, k)}")
 
 # 2
 m=float(input())
