@@ -1,3 +1,4 @@
+#№1
 print(2*4%7, type(2*4%7))
 print(2*(4%7), type(2*(4%7)))
 print(51//6%7, type(51//6%7))
@@ -9,6 +10,7 @@ print(bool(-0.0), type(bool(-0.0)))
 print(float('inf'), type(float('inf')))
 print(int(bool(13.56)), type(int(bool(13.56))))
 print("""
+#№4
 Виконавець: Ляшук
             Андрій
             Анатолійович
