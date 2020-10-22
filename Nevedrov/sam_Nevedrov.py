@@ -83,7 +83,7 @@ if __name__ == "__main__":
     for key, value in world_covid19_stats().items():
         print(f"{key}\n{value}\n")
 #11
-sequence = [int(i) for i in input('Print your number sequence through space').split()]
+sequence = [int(i) for i in input('Print your number sequence through space:').split()]
 if len(sequence) == len(set(sequence)):
     print('Numbers in sequence are unique')
 else:
