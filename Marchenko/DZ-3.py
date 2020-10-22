@@ -1,4 +1,7 @@
-       # 1
+# https://www.codewars.com/users/marchenkov25
+# http://t.me/elfvic_bot
+
+     # 1
 def func(a, b):
     return f'Good morning, {a} {b}!'
 
