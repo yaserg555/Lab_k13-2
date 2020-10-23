@@ -1,4 +1,4 @@
-https://www.codewars.com/users/Nevedrov
+# https://www.codewars.com/users/Nevedrov
 from math import isclose
 #1
 
