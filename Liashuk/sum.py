@@ -1,41 +1,57 @@
-try:                                   #3 AND 4
-    a = float(input("Уведіть довжини стороти 1: "))
-    b = float(input("Уведіть довжини сторони 2: "))
-    c = float(input("Уведіть довжини сторони 3: "))
-    print(a + b + c)
-    x = float(input("Уведіть координату x точки: "))
-    y = float(input("Уведіть координату y точки: "))
-    print(f"[{x},{y}]")
-except:
-    print("Введи число!!!")
-from math import log                  #5
-x=input("x")
-y=input("y")
-print(log(int(x+y),69))
-try:                                   #6
-    a=int(input("Число а:  "))
-    b=int(input("Число b:  "))
-    c=int(input("Число c:  "))
-    if a+b==c or a+c==b or c+b==a and  a >= 0 and b >= 0 and c >= 0:
-        print("Yes")
-    else:
-        print("No")
-except:
-    print("Введи число!!!")
-try:                                    #7
-    a1=int(input("Число a1:  "))
-    b1=int(input("Число b1:  "))
-    c1=int(input("Число c1:  "))
-    d1=int(input("Число d1:  "))
-    print(max(a1,b1,c1,d1))
-except:
-    print("not found")
-k=int(input("k:  "))                          #8
-x=int(k/20)
-y=k%20
-if k%2==0:
-    print((y-1)%10)
-else:
-    print(x+1)
-a=[1,3,3,5,7,2,5,4,3,10,7]                   #11
-print(set(a))
+# №1
+def perymetr():
+    try:
+        a=float(input("Уведіть довжину стороти 1: "))
+        b=float(input("Уведіть довжину сторони 2: "))
+        c=float(input("Уведіть довжину сторони 3: "))
+        if a<=0 or b<=0 or c<=0:
+            print("Введи додатнє число(крім 0)!!")
+        else:
+            print("Периметр трикутника",a + b + c)
+    except ValueError:
+        print("Введи число!!!")
+# №2
+def koordynata():
+    try:
+        x = float(input("Уведіть координату 'x' точки: "))
+        y = float(input("Уведіть координату 'y' точки: "))
+        print(f"[{x},{y}]")
+    except ValueError:
+        print("Введи число!!!")
+# №3
+def try_chysla():
+    try:
+        a=int(input("Число а:  "))
+        b=int(input("Число b:  "))
+        c=int(input("Число c:  "))
+        if a+b==c or a+c==b or c+b==a:
+            print("Yes")
+        else:
+            print("No")
+    except ValueError:
+        print("Введи число!!!")
+# №4
+def max_chyslo():
+    try:
+        a1=int(input("Число a1:  "))
+        b1=int(input("Число b1:  "))
+        c1=int(input("Число c1:  "))
+        d1=int(input("Число d1:  "))
+        print(max(a1,b1,c1,d1))
+    except ValueError:
+        print("not found")
+
+# №5
+def k():
+    k=int(input("Введи число k: "))
+    s=0
+    for i in range(10,100):
+        s=s*100+i
+    s=str(s)
+    a=list(s)
+    print(a[k-1])
+perymetr()
+koordynata()
+try_chysla()
+max_chyslo()
+def k()
