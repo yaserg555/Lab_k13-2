@@ -1,3 +1,4 @@
+from math import cos
 # №1
 def perymetr():
     try:
@@ -50,8 +51,20 @@ def k():
     s=str(s)
     a=list(s)
     print(a[k-1])
+
+# №6
+def sume():
+    i=3
+    j=5
+    s=0
+    while i!=113:
+        s+=cos(i/j)
+        i+=2
+        j+=2
+    print(s)
 perymetr()
 koordynata()
 try_chysla()
 max_chyslo()
 k()
+sume()
