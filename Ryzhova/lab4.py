@@ -28,7 +28,7 @@ k1, l1, n1 = int(input()), int(input()), int(input())
 
 k2, l2, n2 = int(input()), int(input()), int(input())
 
-if(k1 * l2 == n2 * l1):
+if(k1 * l2 == k2 * l1):
     if(n1 == n2):
         print("Прямі накладаються")
     else:
