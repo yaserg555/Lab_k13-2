@@ -19,3 +19,9 @@ def world_covid19_stats(url: str = "https://www.worldometers.info/coronavirus/co
     keys += soup.findAll("span", {"class": "panel-title"})
     values += soup.findAll("div", {"class": "number-table-main"})
     return {key.text.strip(): value.text.strip() for key, value in zip(keys, values)}
+
+
+if __name__ == "__main__":
+    print("\033[1m" + "COVID-19 Status of the World" + "\033[0m\n")
+    for key, value in world_covid19_stats().items():
+        print(f"{key}\n{value}\n")
