@@ -1,4 +1,3 @@
-from math import cos
 # №1
 def perymetr():
     try:
@@ -60,6 +59,7 @@ def k():
 
 # №6
 def sume():
+    from math import cos
     i=3
     j=5
     s=0
@@ -68,9 +68,18 @@ def sume():
         i+=2
         j+=2
     print(s)
+
+# №7
+def log():
+    from math import log
+    x=int(input("Введи x: "))
+    y=int(input("Введи y: "))
+    print(log(x+y,69))
+
 perymetr()
 koordynata()
 try_chysla()
 max_chyslo()
 k()
 sume()
+log()
