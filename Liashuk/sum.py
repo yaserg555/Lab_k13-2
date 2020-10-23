@@ -44,13 +44,19 @@ def max_chyslo():
 
 # №5
 def k():
-    k=int(input("Введи число k: "))
-    s=0
-    for i in range(10,100):
-        s=s*100+i
-    s=str(s)
-    a=list(s)
-    print(a[k-1])
+    try:
+        k=int(input("Введи число k: "))
+        s=0
+        for i in range(10,100):
+            s=s*100+i
+        if k<=1 or k>=180:
+            print("Error!")
+        else:
+            s=str(s)
+            a=list(s)
+            print(a[k-1])
+    except ValueError:
+        print("Введи число!!!")
 
 # №6
 def sume():
