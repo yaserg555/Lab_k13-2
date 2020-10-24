@@ -7,7 +7,7 @@ def rizni():
     x=input("x:  ")
     y=input("y:  ")
     z=input("z:  ")
-    return print(x!=y and x!=z and y!=z)
+    return print(x!=y!=z!=x)
 
 # №4
 def kof1():
