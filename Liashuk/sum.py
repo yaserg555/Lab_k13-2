@@ -33,12 +33,17 @@ def try_chysla():
 # №4
 def max_chyslo():
     try:
-        a1=int(input("Число a1:  "))
-        b1=int(input("Число b1:  "))
-        c1=int(input("Число c1:  "))
-        d1=int(input("Число d1:  "))
-        print(max(a1,b1,c1,d1))
-    except ValueError:
+        k=[]
+        a=int(input("Число a:  "))
+        b=int(input("Число b:  "))
+        c=int(input("Число c:  "))
+        d=int(input("Число d:  "))
+        v=[a,b,c,d]
+        for i in range(0,4):
+            if v[i]%2==0:
+                k.insert(0,v[i])
+        print(max(k))
+    except BaseException:
         print("not found")
 
 # №5
