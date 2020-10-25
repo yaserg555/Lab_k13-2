@@ -32,32 +32,12 @@ x = int(input())
 y = int(input())
 z = int(input())
 t = int(input())
-if x % 2 == 0 and y % 2 == 0 and z % 2 == 0 and t % 2 == 0:
-    print((max(x, y, z, t)))
-elif y % 2 == 0 and z % 2 == 0 and t % 2 == 0:
-    print((max(y, z, t)))
-elif x % 2 == 0 and z % 2 == 0 and t % 2 == 0:
-    print((max(x, z, t)))
-elif z % 2 == 0 and t % 2 == 0:
-    print((max(z, t)))
-elif y % 2 == 0 and t % 2 == 0:
-    print((max(y, t)))
-elif x % 2 == 0 and y % 2 == 0:
-    print((max(x, y)))
-elif x % 2 == 0 and z % 2 == 0:
-    print((max(x, z)))
-elif x % 2 == 0 and t % 2 == 0:
-    print((max(x, t)))
-elif x % 2 == 0:
-    print(x)
-elif y % 2 == 0:
-    print(y)
-elif z % 2 == 0:
-    print(z)
-elif t % 2 == 0:
-    print(t)
-else:
+m = [x, y, z, t]
+b = [k for k in m if k % 2 == 0]
+if x % 2 == 1 and y % 2 == 1 and z % 2 == 1 and t % 2 == 1:
     print('not found')
+else:
+    print(max(b))
 
 
 k = int(input())
