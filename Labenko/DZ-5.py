@@ -8,6 +8,7 @@ print(f'Літера в шістнадцятковій системі? {vic(x)})
 
 # 2
 
+
 def number(x):
     if x < 0:
         return -1
@@ -27,3 +28,13 @@ def maths(a,b,c):
     elif k > 0:
         return float((-b+(sqrt(k))/(2*a))), float((-b-(sqrt(k))/(2*a)))
 print(f'Результат = {maths(a,b,c)}')
+      
+# 4
+a = float(input("Довжина першого ребра цегли = "))
+b = float(input("Довжина другого ребра цегли = "))
+c = float(input("Довжина третього ребра цегли = "))
+x = float(input("Довжина вікна = "))
+y = float(input("Ширина вікна = "))
+def vic(a, b, c, x, y):
+    return (x > b and x > a and y > b and y > a) or (x > b and x > c and y > b and y > b) or (x > a and x > c and y > a and y > c)
+print(f'Чи влазить цегла у вікно? {vic(a, b, c, x, y)}')
