@@ -2,7 +2,7 @@
 
 x = input('Впишіть літеру')
 def vic(x):
-    d = 'ABCDEF'
+    d = ['A', 'B', 'C', 'D', 'E', 'F']
     return x in d
 print(f'Літера в шістнадцятковій системі? {vic(x)})
 
