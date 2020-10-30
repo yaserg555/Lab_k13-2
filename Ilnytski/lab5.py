@@ -23,7 +23,7 @@ def equation(a, b, c):
             print((-b - sqrt(d)) / 2, (-b + sqrt(d)) / 2)
 
 def inside(x, y, z, a, b):
-    if ((x < a and y < b) or (x < b and y < a) or (y < a and z < b) or (y < b and z < a) or (x < a and y < b) or (x < b and y < a)):
+    if ((x <= a and y <= b) or (x <= b and y <= a) or (y <= a and z <= b) or (y <= b and z <= a) or (x <= a and y <= b) or (x <= b and y <= a)):
         print("Yes")
     else:
         print("No")
