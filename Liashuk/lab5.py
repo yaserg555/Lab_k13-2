@@ -1,8 +1,3 @@
-x = input(f'Впишіть літеру')
-def q(x):
-    d = ['A', 'B', 'C', 'D', 'E', 'F']
-    return x in d
-print(f'{q(x)})
 #№2
 def oznaka(x):
     if x>0:
