@@ -1,6 +1,6 @@
 #1
 def check(x):
-    return x in ['A','B','C','D','F']
+    return x in ['A','B','C','D','F','E']
 #2
 def check_mod(x):
     return {
