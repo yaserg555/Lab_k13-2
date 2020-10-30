@@ -2,7 +2,7 @@ x = input(f'Впишіть літеру')
 def vic(x):
     d = ['A', 'B', 'C', 'D', 'E', 'F']
     return x in d
-print(f'Літера в шістнадцятковій системі? {vic(x)})
+print(f'{vic(x)})
 #№2
 def oznaka(x):
     if x>0:
