@@ -1,6 +1,6 @@
 # 1
 def f_1(s):
-    return len(s) == 1 and s in 'ABCDEF'
+    return len(s) == 1 and s in 'ABCDEFabcdef'
 
 # 2
 def f_2(x):
