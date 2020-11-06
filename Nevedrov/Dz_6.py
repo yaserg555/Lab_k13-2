@@ -1,11 +1,9 @@
 def input_number(a, b):
     try:
-        if a <= (x := int(input('Enter value: '))) <= b:
-            return x
-        else:
+        if not a <= (x := float(input('Enter value: '))) <= b:
             print('wrong input')
             input_number(a, b)
+        return x
     except ValueError:
         print('wrong input')
         input_number(a, b)
-        
