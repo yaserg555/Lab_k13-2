@@ -13,3 +13,19 @@ def odd():
     else:
         print(f"Ні")
 odd()
+
+#3
+def fibonacci():
+    m = int(input(f"Введіть число "))
+    n = 0
+    p = 1
+    k = n + p
+    if m<0:
+        return n
+    while k <= m:
+        c = p
+        p += n
+        n = c
+        k = n+p
+    return k
+print(f"{fibonacci()}")
