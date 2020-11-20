@@ -17,7 +17,7 @@ def square_digits_number(number):
     square_digits = []
     for i in range(0, len(t := str(number))):
         square_digits.append(str(int(t[i])**2))
-    return ''.join(square_digits)
+    return int(''.join(square_digits))
 
 
 def seq_c_2(number):
