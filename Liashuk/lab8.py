@@ -18,3 +18,14 @@ def f(a):
         a=a//10
     return s if a>=0 else False
 f(12304)
+
+print('♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠ Завдання № 5 ♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠')
+def kombinazia_2(n):
+    k=1
+    c=1
+    print(1.0)
+    while k!=n+1:
+        c=c*(2*(2*k-1))/(k+1)
+        k+=1
+        print(c)
+kombinazia_2(10)
