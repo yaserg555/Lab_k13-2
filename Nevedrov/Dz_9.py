@@ -51,7 +51,7 @@ def divide_by_13_list(list):
 #28
 def pair_numbers_sum(list):
     sum = 0
-    for i in range(len(list)-1):
+    for i in range(len(list)):
         if not list[i] % 2:
             sum += list[i]
     return sum
