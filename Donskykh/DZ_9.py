@@ -14,3 +14,24 @@ def f6(s):
     print(f'8) {list(reversed(s[:10]))}')
     print(f'9) {s[2::3]}')
     print(f'10) {list(reversed(s[2::3]))}')
+
+
+def f9a():
+    try:
+        x = int(input())
+    except:
+        return False
+    else:
+        s.append(x)
+        return True
+    
+    
+def f9b():
+    try:
+        x = int(input())
+    except:
+        s.clear()
+        return False
+    else:
+        s.append(x)
+        return True
