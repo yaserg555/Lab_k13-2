@@ -13,7 +13,6 @@ def func1():
     a.pop(-1)
     print(a)
     print((b)[::-1])
-func1()
 
 #15
 def func3(nums):
