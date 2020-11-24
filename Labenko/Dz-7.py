@@ -14,6 +14,22 @@ def odd():
         print(f"Ні")
 odd()
 
+#2
+def max(a,b):
+    e = -10
+    if a > b:
+        a, b = b, a
+    if a <= 0:
+        a = 10 ** -6
+    while a < b:
+        f1 = math.sin(math.cos(13*a))
+        f2 = math.cos(math.log(a))
+        f = q1 + q2
+        if f > e:
+            e = f
+        a += 10**-3
+    return e
+
 #3
 def fibonacci():
     m = int(input(f"Введіть число "))
