@@ -28,7 +28,7 @@ def f_13(n):
             if a in s:
                 raise RuntimeError
             s.append(a)
-        except:
+        except BaseException:
             raise RuntimeError
     return s
 
