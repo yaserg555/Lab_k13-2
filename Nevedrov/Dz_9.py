@@ -57,6 +57,7 @@ def pair_numbers_sum(list):
     return sum
 
 
+#33
 def list_sum(list_1, list_2):
     return sorted(list(set(list_1 + list_2)))
 
