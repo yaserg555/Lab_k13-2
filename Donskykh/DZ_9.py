@@ -44,4 +44,4 @@ def f17(s):
             x.append(-1)
         else:
             x.append(i)
-    return x
+    return x #[x if x>=0 else -1 for x in s]
