@@ -57,6 +57,20 @@ def a_23(a,b):
         res=1
     return res
 
+def a_29(a):
+    s=0
+    for i in range(0,len(a)):
+        if i%2==0:
+            s+=a[i]
+    return s
+
+def b_29(a):
+    s=0
+    for i in range(0,len(a)):
+        if i%2==1:
+            s+=a[i]
+    return s
+print(b_29([3,32,4,5,6,8]))
 
 print('*** Завдання № 9(а)')
 print(a_9([32,34,345,6,7,6]))
@@ -75,3 +89,9 @@ print(a_18([0,43,545,60,40,0,0,10]))
 
 print('*** Завдання № 23')
 print(a_23([12,0,43,0,23,3,0,0],0))
+
+print('*** Завдання № 29(a)')
+print(a_29([3,32,4,5,6,8]))
+
+print('*** Завдання № 29(b)')
+print(b_29([3,32,4,5,6,8]))
