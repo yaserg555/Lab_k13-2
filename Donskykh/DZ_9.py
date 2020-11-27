@@ -35,3 +35,13 @@ def f9b():
     else:
         s.append(x)
         return True
+
+    
+def f17(s):
+    x=[]
+    for i in s:
+        if i<0:
+            x.append(-1)
+        else:
+            x.append(i)
+    return x
