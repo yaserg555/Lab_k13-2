@@ -40,6 +40,22 @@ def a2_13(n):
     except ValueError:
         print('*** ValueError')
 
+def a_18(a):
+    while 0 in a :
+        a.remove(0)
+    return a
+
+def a_23(a,b):
+    try:
+        s=0
+        n=a.count(b)
+        for i in range(0,len(a)):
+            if b==a[i]:
+                s+=i
+        res=s/n
+    except ZeroDivisionError:
+        res=1
+    return res
 
 
 print('*** Завдання № 9(а)')
@@ -53,3 +69,9 @@ print(a_12([32,32,5,23,'ds',320,0,0,0,'sds',0,'32',0,00,0,0,32]))
 
 print('*** Завдання № 13')
 print(a2_13(6))
+
+print('*** Завдання № 18')
+print(a_18([0,43,545,60,40,0,0,10]))
+
+print('*** Завдання № 23')
+print(a_23([12,0,43,0,23,3,0,0],0))
