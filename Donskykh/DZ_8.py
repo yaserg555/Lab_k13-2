@@ -22,3 +22,9 @@ def f4_8(n):
     return a
 
 
+def f5_8(n):
+    x=2
+    print(f'1\n1')
+    for i in range(2,n+1):
+        x*=(2*i-1)*(2*i)/i**2
+        print(x/(i+1))
