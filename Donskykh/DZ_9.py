@@ -70,3 +70,9 @@ def f36(a,b):
             if len(a) != len(b):
                 return False
     return True
+
+
+
+def f49(s):  # 49.	За списком побудувати список його елементів, що зустрічаються в ньому рівно один раз. 
+    # Елементи вважати однаковими якщо порівняння == повертає на них True. 
+    return [True if s.index(i) == len(s) - 1 - s[::-1].index(i) else False for i in s]
