@@ -18,3 +18,10 @@ def f4_7(a,b,e=1):
 
 
 
+def fib(m):
+    a1,a2=1,1
+    while a2<m:
+        temp=a2
+        a2=a2+a1
+        a1=temp
+    return a2
