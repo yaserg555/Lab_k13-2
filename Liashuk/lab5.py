@@ -21,10 +21,11 @@ def rivnyna(a,b,c):
     return x
 #№4
 def xnay(a,b,c,x,y):
-    if a*b<=x*y or a*c<=x*y or b*c<=x*y:
-        print('Yes')
-    else:
-        print('No')
+    k1=[a,b,c]
+    k2=min(k1)
+    k1.remove(k2)
+    k3=min(k1)
+    return ((x>=k2) and (y>=k3)) or ((x>=k3) and (y>=k2))
 #№5
 def vik(age):
     if ( 11 <= age and age <= 19):
