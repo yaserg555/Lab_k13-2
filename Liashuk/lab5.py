@@ -6,7 +6,7 @@ def oznaka(x):
         a=-1
     else:
         a=0
-    return print(a)
+    return a
 #№3
 def rivnyna(a,b,c):
     if a!=0:
@@ -21,7 +21,7 @@ def rivnyna(a,b,c):
         print(-1)
     elif a==0:
         x=1
-    return print(x)
+    return x
 #№4
 def xnay(a,b,c,x,y):
     if a*b<=x*y or a*c<=x*y or b*c<=x*y:
