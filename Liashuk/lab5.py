@@ -9,18 +9,15 @@ def oznaka(x):
     return a
 #№3
 def rivnyna(a,b,c):
-    if a!=0:
-        D=b**2-4*a*c
-        if D>0:
-            x=2
-        elif D<0:
-            x="Ne isnuye"
-        else:
-            x=1
-    elif a==b==c==0:
-        print(-1)
-    elif a==0:
+    D=b**2-4*a*c
+    if D>0:
+        x=2
+    elif D==0 and a!=b!=c!=0:
         x=1
+    elif a==b==c==0:
+        x=-1
+    else:
+        x=0
     return x
 #№4
 def xnay(a,b,c,x,y):
