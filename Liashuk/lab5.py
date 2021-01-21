@@ -1,4 +1,9 @@
-#№2
+#№1
+def f(x):
+    x = input(f"Напишите одну букву")
+    bykva = ["A", "B", "C", "D", "E", "F"]
+    return x in bykva
+# №2
 def oznaka(x):
     if x>0:
         a=1
@@ -7,7 +12,7 @@ def oznaka(x):
     else:
         a=0
     return a
-#№3
+# №3
 def rivnyna(a,b,c):
     D=b**2-4*a*c
     if D>0:
@@ -19,14 +24,14 @@ def rivnyna(a,b,c):
     else:
         x=0
     return x
-#№4
+# №4
 def xnay(a,b,c,x,y):
     k1=[a,b,c]
     k2=min(k1)
     k1.remove(k2)
     k3=min(k1)
     return ((x>=k2) and (y>=k3)) or ((x>=k3) and (y>=k2))
-#№5
+# №5
 def vik(age):
     if ( 11 <= age and age <= 19):
         print(age, "років")
