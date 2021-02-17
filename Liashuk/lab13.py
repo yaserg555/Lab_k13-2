@@ -33,6 +33,20 @@ def grabscrab(word, possible_words):
 from collections import Counter
 def grabscrab(word, possible_words):
     return [i for i in possible_words if Counter(word) == Counter(i)]
+
 # Nomer 3 
 
+def f(x):
+    y = x // 2
+    return [i for i in range(2,y+1) if x%i == 0]
+
+
+def factorsRange(n, m):
+    k = dict()
+    for i in range(n, m+1):
+        if f(i) == []:
+            k[i] = ['None']
+        else:
+            k[i] = f(i)
+    return k
     
