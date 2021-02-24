@@ -28,7 +28,7 @@ class teplytcha:
             self.humidity = self.humidity - random.randint(-5, 5) + 2 * self.open_windows - 0.3 * self.used_heaters
             if self.__is_show_state:
                 self.print_state()
-            teplytcha.__input_command()
+            self.__input_command()
 
     def print_state(self):
         '''Show system state'''
@@ -102,7 +102,7 @@ class teplytcha:
             {self.__find_new_key(self.turn_off_heater)} (turn off heater)
                 Deactivate on one of heaters if all of them aren\'t deactivated
 
-            {self.__find_new_key(self.show_state)} (show state)
+            {self.__find_new_key(self.__show_state)} (show state)
                 Prints object state (temp, humidity, open windows, activated heaters) every iteration when activated
                 To deactivate use this method again
 
