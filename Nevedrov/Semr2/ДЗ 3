@@ -56,7 +56,6 @@ class teplytcha:
                 print('Wrong command')
 
     def __bind(self, old_command, new_command):
-        list(self.__command_dict)
         if new_command in self.__command_dict.keys():
             print('Incorrect bind')
         else:
