@@ -1,6 +1,3 @@
-import random
-
-
 class teplytcha:
     temp: float = 10
     humidity: float = 36.2
@@ -12,7 +9,7 @@ class teplytcha:
     def __init__(self, temp=temp, humidity=humidity, windows=windows, heaters=heaters, open_windows=open_windows,
                  used_heaters=used_heaters):
         self.__command_dict = {'OW': self.open_window, 'ONH': self.turn_on_heater, 'OFFH': self.turn_off_heater,
-                               'CW': self.close_window, 'SS': self.show_state, 'S': self.__shutdown,
+                               'CW': self.close_window, 'SS': self.__show_state, 'S': self.__shutdown,
                                'C': self.__continue, 'help()': self.__help, 'bind': self.__bind}
         self.__is_working = True
         self.__is_activated = False
@@ -45,7 +42,7 @@ class teplytcha:
 
     def __input_command(self):
         self.is_work = True
-        while self.is_work:
+        while self.is_work and self.__is_working:
             command = input('Enter command: ')
             args = [i for i in command.split()]
             try:
@@ -63,9 +60,6 @@ class teplytcha:
         if self.used_heaters < self.heaters:
             self.used_heaters += 1
 
-    def show_state(self):
-        self.__is_show_state = not self.__is_show_state
-
     def close_window(self):
         if self.open_windows > 0:
             self.open_windows -= 1
@@ -73,6 +67,9 @@ class teplytcha:
     def turn_off_heater(self):
         if self.used_heaters > 0:
             self.used_heaters -= 1
+
+    def __show_state(self):
+        self.__is_show_state = not self.__is_show_state
 
     def __shutdown(self):
         self.__is_activated = False
