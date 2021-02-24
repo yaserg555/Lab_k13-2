@@ -11,6 +11,10 @@ class teplytcha:
 
     def __init__(self, temp=temp, humidity=humidity, windows=windows, heaters=heaters, open_windows=open_windows,
                  used_heaters=used_heaters):
+        self.__command_dict = {'OW': self.__open_window, 'ONH': self.__turn_on_heater, 'OFFH': self.__turn_off_heater,
+                               'CW': self.__close_window, 'SS': self.__show_state, 'S': self.__shutdown,
+                               'C': self.__continue,
+                               'help()': self.__help, 'bind': self.__bind}
         self.__is_working = True
         self.__is_activated = False
         self.__is_show_state = False
@@ -41,15 +45,23 @@ class teplytcha:
         ''')
 
     def __input_command(self):
-        command_dict = {'OW': self.__open_window, 'ONH': self.__turn_on_heater, 'OFFH': self.__turn_off_heater,
-                        'SS': self.__show_state, 'S': self.__shutdown, 'C': self.__continue, 'help()': self.__help}
         self.is_work = True
         while self.is_work:
             command = input('Enter command: ')
+            args = [i for i in command.split()]
             try:
-                command_dict[command]()
+                self.__command_dict[args[0]](args[1], args[2])
+            except IndexError:
+                self.__command_dict[command]()
             except KeyError:
                 print('Wrong command')
+
+    def __bind(self, old_command, new_command):
+        list(self.__command_dict)
+        if new_command in self.__command_dict.keys():
+            print('Incorrect bind')
+        else:
+            self.__command_dict[new_command] = self.__command_dict.pop(old_command)
 
     def __open_window(self):
         if self.open_windows < self.windows:
@@ -77,33 +89,36 @@ class teplytcha:
     def __continue(self):
         self.is_work = False
 
+    def __find_new_key(self, function):
+        return list(self.__command_dict.keys())[list(self.__command_dict.values()).index(function)]
+
     def __help(self):
         print(
-            '''
-            OW (open window)
+            f'''
+            {self.__find_new_key(self.__open_window)} (open window)
                 Opens one of windows if all of them aren\'t opened
-    
-            CW (close_window)
+
+            {self.__find_new_key(self.__close_window)} (close window)
                 Close one of windows if all of them aren\'t closed
-                
-            ONH (turn on heater)
+
+            {self.__find_new_key(self.__turn_on_heater)} (turn on heater)
                 Activate on one of heaters if all of them aren\'t activated
-                
-            OFFH (turn on heater)
-                Activate on one of heaters if all of them aren\'t activated
-            
-            SS (show state)
+
+            {self.__find_new_key(self.__turn_off_heater)} (turn off heater)
+                Deactivate on one of heaters if all of them aren\'t deactivated
+
+            {self.__find_new_key(self.__show_state)} (show state)
                 Prints object state (temp, humidity, open windows, activated heaters) every iteration when activated
                 To deactivate use this method again
-                
-            C (continue)
+
+            {self.__find_new_key(self.__continue)} (continue)
                 Go on next iteration
-            
-            S (shutdown)
+
+            {self.__find_new_key(self.__shutdown)} (shutdown)
                 Stops execution of the program but saves object state  
+
+            {self.__find_new_key(self.__bind)} [old command] [new command] (bind)
+                Bind new command instead old command
+                If new command equal with old commands do nothing
             '''
         )
-        
-        
-teplytcha = teplytcha()
-teplytcha.start()
