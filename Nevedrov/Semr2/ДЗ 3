@@ -121,3 +121,7 @@ class teplytcha:
                 If new command equal with old commands do nothing
             '''
         )
+
+
+teplytcha = teplytcha()
+teplytcha.start()
