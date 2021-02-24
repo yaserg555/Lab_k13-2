@@ -69,10 +69,6 @@ class Teplica():
         else:
             print('Обігрівач вимкнено')
 
-
-
-
-
 def starts(a, b, c, d):
     print('Теплиця запущена')
     print('Показники на даний момент:\n')
@@ -107,7 +103,6 @@ def programa(a, b, c, d):
         my_teplica.temperatura -= c
         my_teplica.o += 1
         my_teplica.obigrivach_v -= 1
-
 
 def ODZ():
     a1, a2 = 30, 50
