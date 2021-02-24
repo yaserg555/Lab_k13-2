@@ -13,8 +13,7 @@ class teplytcha:
                  used_heaters=used_heaters):
         self.__command_dict = {'OW': self.__open_window, 'ONH': self.__turn_on_heater, 'OFFH': self.__turn_off_heater,
                                'CW': self.__close_window, 'SS': self.__show_state, 'S': self.__shutdown,
-                               'C': self.__continue,
-                               'help()': self.__help, 'bind': self.__bind}
+                               'C': self.__continue, 'help()': self.__help, 'bind': self.__bind}
         self.__is_working = True
         self.__is_activated = False
         self.__is_show_state = False
