@@ -1,0 +1,113 @@
+class Library:
+    books = 10
+
+    def __init__(self):
+        self.books = Library.books
+
+    def _take_a_book(self, books=10):
+        if self.books > 0:
+            Library.books += -1
+            print('There is you book!')
+        else:
+            print('There is no books in our library. Come later!')
+
+    def _return_a_book(self):
+        if self.books < 10:
+            Library.books += 1
+            print('Thank you!')
+        else:
+            print('Your book is not from our library!')
+
+
+def command_library():
+    try:
+        com = str(input('If you want to take a book: print "take", if you want to return a book: print "return": '))
+    except Exception:
+        raise 'Wrong input'
+    else:
+        return com
+
+
+def client_library(c):
+    com = command_library()
+    if com == 'take':
+        c._take_a_book()
+    elif com == 'return':
+        c._return_a_book()
+    else:
+        print('Rewrite your command, you`ve made a mistake')
+        client_library(c)
+
+
+client1 = Library()
+client_library(client1)
+
+
+class Fridge:
+
+
+    def __init__(self):
+       inside = []
+       self.inside = inside
+
+
+    def _put_an_elephant(self):
+        if len(self.inside) == 0:
+            self.inside.append('elephant')
+            print('You did that')
+        else:
+            print(f'There is no space. There is a/an {self.inside[0]}')
+
+
+    def _put_a_hippo(self):
+        if len(self.inside) == 0:
+            self.inside.append('hippo')
+            print('You did that')
+        else:
+            print(f'There is no space. There is a/an {self.inside[0]}')
+
+
+    def _take_an_elephant(self):
+        if 'elephant' in self.inside:
+            self.inside.remove('elephant')
+            print('You did that')
+        else:
+            print('There is no elephant')
+
+
+    def _take_a_hippo(self):
+        if 'hippo' in self.inside:
+            self.inside.remove('hippo')
+            print('You did that')
+        else:
+            print('There is no hippo')
+
+
+def command_fridge():
+    try:
+        com = str(input('If you want to put a hippo into a fridge: print "put a hippo", if you want to take an elephant out of\n'
+                         'fridge: print "take an elephant": '))
+    except Exception:
+        raise 'Wrong input'
+    else:
+        return com
+
+
+def client_fridge(k):
+    for _ in range(11):
+        com = command_fridge()
+        if com == 'put an elephant':
+            k._put_an_elephant()
+        elif com == 'take an elephant':
+            k._take_an_elephant()
+        elif com == 'put a hippo':
+            k._put_a_hippo()
+        elif com == 'take a hippo':
+            k._take_a_hippo()
+        else:
+            print('Rewrite your command, you`ve made a mistake')
+            client_fridge(k)
+
+
+k = Fridge()
+client_fridge(k)
