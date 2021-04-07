@@ -1,0 +1,137 @@
+import sys
+
+# OLD
+#1
+
+
+def list_to_file(numbers: list, fname: str):
+    with open(fname, 'w+', encoding='utf-8') as f:
+        for number in numbers:
+            f.write(str(number)+'\n')
+
+#2,3
+
+
+def file_to_list_c(fname: str):
+    errors = 0
+    numbers = []
+    with open(fname, 'r', encoding='utf-8') as f:
+        data = f.readlines()
+        for row in data:
+            try:
+                row = int(row)
+                numbers.append(row)
+            except Exception as e:
+                print(str(row), e, file=sys.stderr)
+                errors += 1
+    print(errors)
+    return numbers
+
+#4
+
+
+def read_file(fname: str):
+    with open(fname, 'r', encoding='utf-8') as file:
+        return (int(x) for x in iter(file.read()) if x.isnumeric())
+
+
+#5
+
+
+def is_files_equal(fname_1: str, fname_2: str):
+    with open(fname_1, 'r', encoding='utf-8') as file_1:
+        with open(fname_2, 'r', encoding='utf-8') as file_2:
+            numbers_1 = [number for number in iter(file_1.read()) if number.isnumeric()]
+            numbers_2 = [number for number in iter(file_2.read()) if number.isnumeric()]
+            return numbers_1 == numbers_2
+
+
+#NEW
+#1
+
+
+def file_into_pairs(fname: str):
+    pairs = []
+    with open(fname, 'r', encoding='utf-8') as file:
+        for line in file:
+            pairs.append([int(x) for x in line.rstrip().split(' ')])
+    return pairs
+
+
+#2
+
+
+def string_count(fname: str):
+    with open(fname, 'r', encoding='utf-8') as file:
+        return sum(char.count('\n') for char in iter(lambda: file.read(1), '')) + 1
+
+
+#FRIDGE
+
+
+class Fridge:
+
+    def __init__(self):
+        self.command_dict = {'GE': self.get_elephant, 'GB': self.get_behemoth,
+                             'PE': self.put_elephant, 'PB': self.put_behemoth}
+        self.is_elephant: bool = False
+        self.is_behemoth: bool = False
+
+    def start(self):
+        for i in range(10):
+            command = input('Enter command: ')
+            try:
+                self.command_dict[command]()
+            except KeyError:
+                print('wrong command')
+
+    def get_elephant(self):
+        if self.is_elephant:
+            self.is_elephant = False
+            print('done')
+        else:
+            print('Ups')
+
+    def get_behemoth(self):
+        if self.is_behemoth:
+            self.is_behemoth = False
+            print('done')
+        else:
+            print('Ups')
+
+    def put_elephant(self):
+        if not (self.is_elephant or self.is_behemoth):
+            self.is_elephant = True
+            print('done')
+        else:
+            print('Ups')
+
+    def put_behemoth(self):
+        if not (self.is_elephant or self.is_behemoth):
+            self.is_behemoth = True
+            print('done')
+        else:
+            print('Ups')
+
+
+#LIBRARY
+
+
+class Library:
+
+    def __init__(self):
+        self.books: int = 10
+
+    def give_book(self):
+        if self.books > 0:
+            self.books -= 1
+            print('done')
+        else:
+            print('No more books left!')
+
+    def take_book(self):
+        if self.books <= 1:
+            self.books += 1
+            print('done')
+        else:
+            print('All books already taken!')
