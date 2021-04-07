@@ -21,6 +21,7 @@ with open('file.txt', 'r', encoding = "UTF-8") as file:
     for i in enumerate(file, 1):
         pass
     print(int(i[0]))
+
 # №3
 class Refrigerator:
 
@@ -92,5 +93,47 @@ k = 0
 while k < 3:
     obj.resultat()
     k += 1
+
     
+# №4
+class Biblioteka:
+    def __init__(self, book=10, dict_1={1: 'PT', 2: 'PUT', 3: 'STOP'}):
+        self.book = book
+        self.dict_1 = dict_1
+
+    def publish_textbook(self):
+        if self.book > 0:
+            self.book -= 1
+        else:
+            print('Підрчників немає!!!\n')
+
+    def pick_up_textbook(self):
+        if self.book < 10:
+            self.book += 1
+        else:
+            print('Всі підручники на місці\n')
+
+    def output(self):
+        print(f"{self.dict_1[1]}: publish_textbook\n"
+              f"{self.dict_1[2]}: pick_up_textbook\n"
+              f"{self.dict_1[3]}: stop program")
+        print('Кількість підручників в бібліотеці:', self.book)
+
+    def resultat(self):
+        Biblioteka.output(self)
+        str_1 = input('Enter: ')
+        while str_1 != 'STOP':
+            if str_1 == self.dict_1[1]:
+                Biblioteka.publish_textbook(self)
+            elif str_1 == self.dict_1[2]:
+                    Biblioteka.pick_up_textbook(self)
+            else:
+                print("Команди не знайдено!!!\n")
+            Biblioteka.output(self)
+            str_1 = input('Enter: ')
+
+
+obj = Biblioteka()
+obj.resultat()
+
     
