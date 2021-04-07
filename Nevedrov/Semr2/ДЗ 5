@@ -137,7 +137,7 @@ class Library:
             print('No more books left!')
 
     def take_book(self):
-        if self.books <= 1:
+        if self.books <= 10:
             self.books += 1
             print('done')
         else:
