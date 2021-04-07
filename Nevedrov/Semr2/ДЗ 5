@@ -41,10 +41,17 @@ def read_file(fname: str):
 def is_files_equal(fname_1: str, fname_2: str):
     with open(fname_1, 'r', encoding='utf-8') as file_1:
         with open(fname_2, 'r', encoding='utf-8') as file_2:
-            numbers_1 = [number for number in iter(file_1.read()) if number.isnumeric()]
-            numbers_2 = [number for number in iter(file_2.read()) if number.isnumeric()]
-            return numbers_1 == numbers_2
-
+            numbers_1 = (number for number in iter(file_1.read()) if number.isnumeric())
+            numbers_2 = (number for number in iter(file_2.read()) if number.isnumeric())
+            numbers_1_len = numbers_2_len = 0 
+            for i in numbers_1:
+                numbers_1_len += 1
+            for j in numbers_2:
+                numbers_2_len += 1
+            if numbers_1_len != numbers_2_len:
+                return False
+            match = (number_1 == number_2 for number_1, number_2 in zip(numbers_1, numbers_2))
+            return all(match)
 
 #NEW
 #1
